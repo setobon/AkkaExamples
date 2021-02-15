@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile 'com.typesafe.akka:akka-actor-typed_2.13:2.6.12'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    testCompile 'com.typesafe.akka:akka-actor-testkit-typed_2.13:2.6.12'
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+}
+
+test {
+    useJUnitPlatform()
+}
